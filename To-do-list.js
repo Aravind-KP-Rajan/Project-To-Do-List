@@ -30,15 +30,14 @@ function renderTodoList(){
 
 
     //2.use the data to generate HTML
-    const html = `<p>
-    ${name} ${duedate}
+    //used div to insert each elemnt into each grid
+    const html = `
+    <div>${name} </div> 
+    <div> ${duedate} </div>
     <button onclick = "
     toDoList.splice(${i},1);
     renderTodoList();
-
-    
-    ">Delete</button>
-    </p>`; //generating the HTML
+    " class="delete-todo-button">Delete</button>`; //generating the HTML
     toDoListHTML+=html; //accumulating the value into the variable
   }
   
